@@ -1,0 +1,49 @@
+{% extends "shop/layout.html" %}
+
+
+{% block title %}
+    Shop
+{% endblock %}
+
+{% block nav %}
+								<li class="nav-item">
+                                    <a class="nav-link" href="../index.html" data-no="1">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Crop-Recommendation.html" data-no="2">Crop Recommendation</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Crop-Search.html" data-no="4">Crop Search</a>
+                                </li>
+                                <li class="nav-item active selected">
+                                    <a class="nav-link" href="shop.html" data-no="6">Ecommerce</a>
+									<span class="sr-only">(current)</span>
+                                </li>
+{% endblock %}
+
+{% block body %}
+	<div class="container" id="topdiv6">
+		<nav class="navbar navbar-light bg-light">
+			<span class="navbar-brand mb-0 h1">Produce Market</span>
+			<a class="my-2 my-sm-0" href="{{url_for('signup')}}">Add items here!</a>
+		</nav>
+		{% if rows %}
+				<div class="row" id="index0">
+					{% for row in rows %}
+						<div class="card needspace" style="width: 18rem;">
+							<img src="{{ url_for('static_dir', path = 'shop/images/'+row.filename) }}" class="card-img-top" alt="...">
+							<div class="card-body">
+			    				<h5 class="card-title">{{row.name}}</h5>
+			    				<p class="card-text">{{row.category}}</p>
+			  				</div>
+			  				<ul class="list-group list-group-flush">
+			  					<li class="list-group-item">{{row.description}}</li>
+
+			    				<li class="list-group-item">{{row.comments}}</li>
+			  				</ul>
+						</div>
+					{% endfor %}
+				</div>
+			{% endif %}
+	</div>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+                                 <li class="nav-item active selected">
+                                    <a class="nav-link" href="#0" data-no="1">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Crop-Recommendation.html" data-no="2">Crop Recommendation</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Crop-Search.html" data-no="4">Crop Search</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="shop/shop.html" data-no="6">Ecommerce</a>
+                                </li>
+{% endblock %}
+
+{% block body %}
+            <ul class="cd-hero-slider">
+                <br><br><br><br>
+                <!-- Page 1 Home -->
+                <li class="selected">
+                    <div class="cd-full-width">
+                        <div class="container-fluid js-tm-page-content tm-page-pad" data-page-no="1">
+                            <div class="row">
+                                    <div class="tm-3-col-container">
+                                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 tm-3-col-textbox">
+                                                <div class="text-xs-left tm-textbox tm-textbox-padding tm-bg-white-translucent tm-3-col-textbox-inner">
+                                                    <i class="fa fa-4x fa-pagelines tm-home-fa"></i>
+                                                    <h2 class="tm-text-title">Crop Recommendation</h2>
+                                                    <p class="tm-text">This block is for a crop to be recommended to you</p>
+                                                </div>
+                                            </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 tm-3-col-textbox">
+                                                <div class="text-xs-left tm-textbox tm-textbox-padding tm-bg-white-translucent tm-3-col-textbox-inner">
+                                                    <i class="fa fa-4x fa-plane tm-home-fa"></i>
+                                                    <h2 class="tm-text-title">Search crop - of choice</h2>
+                                                    <p class="tm-text">This section help you on information about crops in general <a href="http://fontawesome.io/icons/" target="_parent"></a></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 tm-3-col-textbox">
+                                                <div class="text-xs-left tm-textbox tm-textbox-padding tm-bg-white-translucent tm-3-col-textbox-inner">
+                                                    <i class="fa fa-4x fa-bicycle tm-home-fa"></i>
+                                                    <h2 class="tm-text-title">Advertise your Produce</h2>
+                                                    <p class="tm-text">Let comsumers/customers know what produce you have in stock</p>
+                                                </div>
+                                            </div>
+
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+            </ul> <!-- .cd-hero-slider -->
+
+        </div> <!-- .cd-hero -->
+
+{% endblock %}

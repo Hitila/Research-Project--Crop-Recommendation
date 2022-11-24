@@ -1,0 +1,45 @@
+{% extends "shop/layout.html" %}
+
+{% block title %}
+    login
+{% endblock %}
+{% block nav %}
+								<li class="nav-item">
+                                    <a class="nav-link" href="../index.html" data-no="1">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Crop-Recommendation.html" data-no="2">Crop Recommendation</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Crop-Search.html" data-no="4">Crop Search</a>
+                                </li>
+                                <li class="nav-item active selected">
+                                    <a class="nav-link" href="shop.html" data-no="6">Ecommerce</a>
+									<span class="sr-only">(current)</span>
+                                </li>
+{% endblock %}
+{% block body %}
+	{% if msg %}
+		<div class="container">
+			<div class="alert alert-success" role="alert">
+				{{ msg }}
+			</div>
+		</div>
+	{% endif %}
+	<div class="card" id="topdiv0">
+			<form class="px-4 py-3" method="POST" action="{{ url_for('login')}}">
+				<h5 class="card-title">Login as Farm Manager</h5>
+		    <div class="form-group">
+		      <label for="username">Username</label>
+		      <input type="text" required="required" class="form-control" name="username"  autofocus>
+		    </div>
+		    <div class="form-group">
+		      <label for="password">Password</label>
+		      <input type="password" required="required" class="form-control" name="password" placeholder="Password">
+		    </div>
+		    <button type="submit" class="btn btn-primary">Sign in</button>
+		</form>
+		<div class="dropdown-divider"></div>
+		<a class="dropdown-item" href="{{ url_for('signup') }}">New around here? Sign up</a>
+	</div>
+{% endblock %}
